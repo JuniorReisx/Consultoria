@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ChevronDown, ChevronUp, MessageCircle, Users, Star, TrendingUp, Target, Brain } from 'lucide-react';
+import { ChevronDown, ChevronUp} from 'lucide-react';
 
 export function Home(){
   const [openFaq, setOpenFaq] = useState<number | null>(null);
