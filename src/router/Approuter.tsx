@@ -8,7 +8,7 @@ export function Approuter() {
         <Router>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/Form1" element={< FormularioNegocioPage />} />
+                <Route path="/Form1" element={<FormularioNegocioPage />} />
             </Routes>
         </Router>
     )

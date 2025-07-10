@@ -27,32 +27,28 @@ export function FormularioNegocioPage(){
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="h-screen bg-gray-50 flex flex-col">
       {/* Header com barra de progresso */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
+      <header className="bg-white shadow-sm">
         <div className="h-1 bg-gray-200">
           <div 
             className="h-full bg-gradient-to-r from-green-400 to-green-600 transition-all duration-300 ease-out"
-            style={{ width: `${scrollProgress}%` }}
           />
         </div>
         <div className="px-4 py-2 flex items-center justify-between">
           <div className="text-sm font-semibold text-gray-700">
-            Consultoria Gratuita
+            Victor Souza
           </div>
           <div className="text-xs text-gray-500">
-            {Math.round(scrollProgress)}% concluído
+            100% concluído
           </div>
         </div>
       </header>
 
-      {/* Espaçamento para compensar o header fixo */}
-      <div className="pt-16"></div>
-
-      {/* Conteúdo principal */}
-      <div className="min-h-screen flex items-center justify-center px-4">
+      {/* Conteúdo principal centralizado */}
+      <div className="flex-1 flex items-center justify-center px-4">
         <div className="max-w-2xl w-full">
-          <div className="text-center mb-12">
+          <div className="text-center mb-10">
             <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Você quer começar ou escalar o seu negócio?
             </h1>
@@ -118,7 +114,7 @@ export function FormularioNegocioPage(){
 
           {/* Botão de continuação (aparece após seleção) */}
           {selectedOption && (
-            <div className="mt-8 text-center animate-fade-in">
+            <div className="mt-8 text-center">
               <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-2xl text-lg shadow-xl transform hover:scale-105 transition-all duration-300">
                 Continuar com "{selectedOption}"
               </button>
@@ -126,7 +122,7 @@ export function FormularioNegocioPage(){
           )}
 
           {/* Informações adicionais */}
-          <div className="mt-12 text-center">
+          <div className="mt-8 text-center">
             <p className="text-gray-500 text-sm">
               Sua escolha nos ajudará a personalizar melhor sua consultoria gratuita
             </p>
@@ -134,60 +130,14 @@ export function FormularioNegocioPage(){
         </div>
       </div>
 
-      {/* Seção de benefícios */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center text-gray-800 mb-12">
-            O que você receberá na consultoria
-          </h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="font-bold text-gray-800 mb-2">Análise Personalizada</h3>
-              <p className="text-gray-600 text-sm">
-                Análise completa do seu caso específico
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="font-bold text-gray-800 mb-2">Plano de Ação</h3>
-              <p className="text-gray-600 text-sm">
-                Estratégia clara e aplicável para seu negócio
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="font-bold text-gray-800 mb-2">Suporte Especializado</h3>
-              <p className="text-gray-600 text-sm">
-                Orientação de experts em crescimento de negócios
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-gray-400 text-sm mb-2">
-            © 2025 - Criado via inlead.digital | Central de anúncios
-          </p>
-          <p className="text-gray-500 text-xs">
-            Consultoria 100% gratuita e sem compromisso
+      {/* Footer fixo na parte inferior */}
+      <footer className="text-white py-8">
+        <div className="max-w-2xl mx-auto px-4 text-center">
+          <p className="text-gray-400 text-sm">
+            © 2025 Consultoria. Todos os direitos reservados.
           </p>
         </div>
       </footer>
-
     </div>
   );
-};
-
+}
