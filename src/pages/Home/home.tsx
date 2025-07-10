@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, ChevronUp} from 'lucide-react';
-
+import consultoria from '../../assets/consultoriaUm.jpg';
+import consultoria2 from '../../assets/consultoriaDois.jpg';
 export function Home(){
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -53,7 +54,7 @@ export function Home(){
         </div>
         <div className="px-4 py-2 flex items-center justify-between">
           <div className="text-sm font-semibold text-gray-700">
-            Consultoria Gratuita
+            Victor - Consultoria Gratuita
           </div>
           <div className="text-xs text-gray-500">
             {Math.round(scrollProgress)}% concluído
@@ -65,7 +66,7 @@ export function Home(){
       <div className="pt-16"></div>
       {/* Hero Section - Replicando a imagem exata */}
       <section className="max-w-2xl mx-auto px-4 bg-white ">
-        <img className='shadow-2xl rounded-3xl' src="../../src/assets/consultoriaUm.jpg" alt="" />
+        <img className='shadow-2xl rounded-3xl' src={consultoria} alt="" />
       </section>
 
       {/* Seção "Mais de 100 pessoas..." */}
@@ -84,7 +85,7 @@ export function Home(){
 
       {/* Cases de Sucesso */}
       <section className="max-w-2xl mx-auto px-4 bg-white ">
-               <img className='shadow-2xl rounded-3xl' src="../../src/assets/consultoriaUm.jpg" alt="" />
+               <img className='shadow-2xl rounded-3xl' src={consultoria2} alt="" />
 
       </section>
 
@@ -145,10 +146,10 @@ export function Home(){
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8">
+      <footer className="text-white py-8">
         <div className="max-w-2xl mx-auto px-4 text-center">
           <p className="text-gray-400 text-sm">
-            © 2024 Consultoria Gratuita. Todos os direitos reservados.
+            © 2025 Consultoria Gratuita. Todos os direitos reservados.
           </p>
         </div>
       </footer>
