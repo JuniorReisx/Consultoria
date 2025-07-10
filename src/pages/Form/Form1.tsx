@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle } from 'lucide-react';
 export function FormularioNegocioPage(){
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
+ 
 
   const handleOptionSelect = (option: string) => {
     setSelectedOption(option);
