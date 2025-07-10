@@ -1,22 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
 export function FormularioNegocioPage(){
-  const [scrollProgress, setScrollProgress] = useState(0);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
-  // Função para calcular o progresso do scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / docHeight) * 100;
-      setScrollProgress(Math.min(scrollPercent, 100));
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const handleOptionSelect = (option: string) => {
     setSelectedOption(option);
