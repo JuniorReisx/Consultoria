@@ -54,7 +54,7 @@ export function Home(){
         </div>
         <div className="px-4 py-2 flex items-center justify-between">
           <div className="text-sm font-semibold text-gray-700">
-            Victor - Consultoria Gratuita
+            Victor Souza
           </div>
           <div className="text-xs text-gray-500">
             {Math.round(scrollProgress)}% concluído
@@ -84,7 +84,7 @@ export function Home(){
       </section>
 
       {/* Cases de Sucesso */}
-      <section className="max-w-2xl mx-auto px-4 bg-white ">
+      <section className="max-w-2xl mx-auto px-4 bg-white flex justify-center items-center">
                <img className='shadow-2xl rounded-3xl' src={consultoria2} alt="" />
 
       </section>
