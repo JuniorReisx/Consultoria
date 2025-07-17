@@ -12,7 +12,6 @@ export function Home() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  // Função para calcular o progresso do scroll
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -48,7 +47,6 @@ export function Home() {
 
   return (
     <div className="min-h-screen bg-white-100 ">
-      {/* Header com barra de progresso */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
         <div className="h-1 bg-gray-200">
           <div
@@ -66,10 +64,8 @@ export function Home() {
         </div>
       </header>
 
-      {/* Espaçamento para compensar o header fixo */}
       <div className="pt-16"></div>
 
-      {/* Hero Section - Replicando a imagem exata */}
       <section className="max-w-2xl mx-auto px-4 bg-white flex justify-center items-center">
         <img
           className="shadow-2xl rounded-3xl w-[75%]"
@@ -78,7 +74,6 @@ export function Home() {
         />
       </section>
 
-      {/* Seção "Mais de 100 pessoas..." */}
       <section className="py-12 bg-white">
         <div className="max-w-2xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">
@@ -92,7 +87,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* Cases de Sucesso */}
       <section className="max-w-2xl mx-auto px-4 bg-white flex justify-center items-center">
         <img
           className="shadow-2xl rounded-3xl w-[75%]"
@@ -101,7 +95,6 @@ export function Home() {
         />
       </section>
 
-      {/* Seção "Na nossa consultoria gratuita..." */}
       <section className="py-12 bg-white">
         <div className="max-w-2xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">
@@ -115,11 +108,10 @@ export function Home() {
         </div>
       </section>
 
-      {/* Botão CTA */}
       <section className="pb-12 bg-white">
         <div className="max-w-2xl mx-auto px-4 text-center">
           <Link
-            to="/Form1"
+            to="/BusinessForm"
             className="block w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-2xl text-lg shadow-xl transform hover:scale-105 transition-all duration-300 text-center"
           >
             Quero meu plano de ação personalizado!
@@ -127,7 +119,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* FAQ Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-2xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
@@ -164,8 +155,6 @@ export function Home() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
       <footer className="text-white py-8">
         <div className="max-w-2xl mx-auto px-4 text-center">
           <p className="text-gray-400 text-sm">
