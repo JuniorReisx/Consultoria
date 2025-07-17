@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function WithVideoForm() {
   const [whatsappContact, setWhatsappContact] = useState("");
   const [countdown, setCountdown] = useState(600);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (countdown > 0) {
@@ -37,8 +39,12 @@ export default function WithVideoForm() {
     e.preventDefault();
     if (whatsappContact.trim()) {
       console.log("WhatsApp Contact:", whatsappContact);
-      window.location.href = '/ThankyouPage';
+      navigate('/ThankyouPage'); // Navegação com react-router
     }
+  };
+
+  const handleBack = () => {
+    navigate('/'); // Voltar para a rota principal
   };
 
   return (
@@ -59,7 +65,7 @@ export default function WithVideoForm() {
           </div>
         </div>
         <div className="p-4">
-          <button className="text-gray-700 hover:text-gray-900">
+          <button onClick={handleBack} className="text-gray-700 hover:text-gray-900">
             <svg
               className="w-6 h-6"
               fill="none"

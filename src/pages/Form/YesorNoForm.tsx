@@ -1,19 +1,25 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function YesorNoForm() {
   const [resposta, setResposta] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (resposta.trim()) {
       console.log("Contato WhatsApp:", resposta);
-      window.location.href = '/WithVideoForm';
+      navigate('/WithVideoForm'); // navega para o formulário com vídeo
     }
+  };
+
+  const handleBack = () => {
+    navigate(-1); // volta para a página anterior
   };
 
   return (
     <div className="h-screen flex flex-col overflow-hidden bg-gray-50">
-  <header className=" flex-shrink-0">
+      <header className="flex-shrink-0">
         <div className="px-4 py-2 flex items-center justify-between">
           <div className="text-sm font-semibold text-gray-700">
             Victor Souza
@@ -25,7 +31,7 @@ export default function YesorNoForm() {
           <div className="h-full bg-gradient-to-r from-green-400 to-green-600 transition-all duration-300 ease-out" />
         </div>
         <div className="p-4">
-          <button className="text-gray-700 hover:text-gray-900">
+          <button onClick={handleBack} className="text-gray-700 hover:text-gray-900">
             <svg
               className="w-6 h-6"
               fill="none"

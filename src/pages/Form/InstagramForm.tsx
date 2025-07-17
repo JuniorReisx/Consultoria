@@ -1,13 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function InstagramForm() {
   const [nome, setNome] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (nome.trim()) {
       console.log("Instagram enviado:", nome);
-      window.location.href = '/AgeForm';
+      navigate('/AgeForm');
     }
   };
 

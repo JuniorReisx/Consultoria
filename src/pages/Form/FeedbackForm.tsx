@@ -1,13 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function FeedbackForm() {
   const [resposta, setResposta] = useState("");
+  const navigate = useNavigate();
 
-  const handleSubmit = (e : React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (resposta.trim()) {
       console.log("Resposta enviada:", resposta);
-      window.location.href = '/InvestmentForm';
+      navigate("/InvestmentForm");
     }
   };
 

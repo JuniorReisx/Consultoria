@@ -1,7 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 export default function ThankyouPage() {
+  const navigate = useNavigate();
+
   const handleAccessGift = () => {
     console.log("Accessing gift...");
-    window.location.href = '/VideoTrainingPage';
+    navigate('/VideoTrainingPage');
   };
 
   return (

@@ -1,13 +1,15 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
 export default function () {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   const handleOptionSelect = (option: string) => {
     setSelectedOption(option);
     setTimeout(() => {
-      window.location.href = '/NameForm';
+      navigate('/NameForm');
     }, 500);
   };
 

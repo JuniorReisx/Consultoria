@@ -1,13 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function AgeForm() {
   const [idade, setIdade] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (idade.trim()) {
       console.log("Idade enviada:", idade);
-      window.location.href = '/IncomeForm';
+      navigate('/IncomeForm');
     }
   };
 

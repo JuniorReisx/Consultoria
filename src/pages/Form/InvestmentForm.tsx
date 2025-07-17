@@ -1,23 +1,23 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function InvestmentForm() {
   const [resposta, setResposta] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (resposta.trim()) {
       console.log("Investimento selecionado:", resposta);
-      window.location.href = '/YesorNoForm';
+      navigate('/YesorNoForm');
     }
   };
 
   return (
     <div className="h-screen flex flex-col overflow-hidden bg-gray-50">
-  <header className=" flex-shrink-0">
+      <header className="flex-shrink-0">
         <div className="px-4 py-2 flex items-center justify-between">
-          <div className="text-sm font-semibold text-gray-700">
-            Victor Souza
-          </div>
+          <div className="text-sm font-semibold text-gray-700">Victor Souza</div>
           <div className="text-xs text-gray-500">100% concluído</div>
         </div>
 

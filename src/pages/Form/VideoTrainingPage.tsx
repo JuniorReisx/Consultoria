@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function VideoTrainingPage() {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,11 +19,14 @@ export default function VideoTrainingPage() {
   }, []);
 
   const handleAccessPresente = () => {
-    const phoneNumber = "5571987769040"; // Número com código do país (55) e DDD (71)
+    const phoneNumber = "5571987769040";
     const message = "Olá! Acabei de assistir ao treinamento comercial e gostaria de saber mais informações.";
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    
     window.open(whatsappURL, '_blank');
+  };
+
+  const handleBack = () => {
+    navigate('/'); // Altere para a rota desejada
   };
 
   return (
@@ -42,7 +47,7 @@ export default function VideoTrainingPage() {
           </div>
         </div>
         <div className="p-4">
-          <button className="text-gray-700 hover:text-gray-900">
+          <button onClick={handleBack} className="text-gray-700 hover:text-gray-900">
             <svg
               className="w-6 h-6"
               fill="none"
