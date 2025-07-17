@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { ArrowRight, CheckCircle } from "lucide-react";
 
 export default function () {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
@@ -9,7 +9,7 @@ export default function () {
   const handleOptionSelect = (option: string) => {
     setSelectedOption(option);
     setTimeout(() => {
-      navigate('/NameForm');
+      navigate("/NameForm");
     }, 500);
   };
 
@@ -26,23 +26,6 @@ export default function () {
         <div className="h-1 bg-gray-200">
           <div className="h-full bg-gradient-to-r from-green-400 to-green-600 transition-all duration-300 ease-out" />
         </div>
-        <div className="p-4">
-          <button className="text-gray-700 hover:text-gray-900">
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-        </div>
       </header>
 
       <div className="flex-1 flex items-center justify-center px-4">
@@ -58,11 +41,11 @@ export default function () {
 
           <div className="space-y-4">
             <button
-              onClick={() => handleOptionSelect('QUERO COMEÇAR')}
+              onClick={() => handleOptionSelect("QUERO COMEÇAR")}
               className={`w-full p-6 rounded-2xl text-left transition-all duration-300 transform hover:scale-105 shadow-lg ${
-                selectedOption === 'QUERO COMEÇAR'
-                  ? 'bg-gray-900 text-white shadow-2xl'
-                  : 'bg-gray-900 text-white hover:bg-gray-800'
+                selectedOption === "QUERO COMEÇAR"
+                  ? "bg-gray-900 text-white shadow-2xl"
+                  : "bg-gray-900 text-white hover:bg-gray-800"
               }`}
             >
               <div className="flex items-center justify-between">
@@ -73,7 +56,7 @@ export default function () {
                   </p>
                 </div>
                 <div className="flex items-center">
-                  {selectedOption === 'QUERO COMEÇAR' ? (
+                  {selectedOption === "QUERO COMEÇAR" ? (
                     <CheckCircle className="w-6 h-6 text-green-400" />
                   ) : (
                     <ArrowRight className="w-6 h-6 text-gray-400" />
@@ -83,11 +66,11 @@ export default function () {
             </button>
 
             <button
-              onClick={() => handleOptionSelect('QUERO ESCALAR')}
+              onClick={() => handleOptionSelect("QUERO ESCALAR")}
               className={`w-full p-6 rounded-2xl text-left transition-all duration-300 transform hover:scale-105 shadow-lg ${
-                selectedOption === 'QUERO ESCALAR'
-                  ? 'bg-white text-gray-900 shadow-2xl border-2 border-gray-900'
-                  : 'bg-white text-gray-900 hover:bg-gray-50 border border-gray-200'
+                selectedOption === "QUERO ESCALAR"
+                  ? "bg-white text-gray-900 shadow-2xl border-2 border-gray-900"
+                  : "bg-white text-gray-900 hover:bg-gray-50 border border-gray-200"
               }`}
             >
               <div className="flex items-center justify-between">
@@ -98,7 +81,7 @@ export default function () {
                   </p>
                 </div>
                 <div className="flex items-center">
-                  {selectedOption === 'QUERO ESCALAR' ? (
+                  {selectedOption === "QUERO ESCALAR" ? (
                     <CheckCircle className="w-6 h-6 text-green-500" />
                   ) : (
                     <ArrowRight className="w-6 h-6 text-gray-400" />
@@ -110,7 +93,8 @@ export default function () {
 
           <div className="mt-8 text-center">
             <p className="text-gray-500 text-sm">
-              Sua escolha nos ajudará a personalizar melhor sua consultoria gratuita
+              Sua escolha nos ajudará a personalizar melhor sua consultoria
+              gratuita
             </p>
           </div>
         </div>

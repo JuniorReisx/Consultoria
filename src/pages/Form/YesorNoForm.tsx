@@ -9,12 +9,8 @@ export default function YesorNoForm() {
     e.preventDefault();
     if (resposta.trim()) {
       console.log("Contato WhatsApp:", resposta);
-      navigate('/WithVideoForm'); // navega para o formulário com vídeo
+      navigate("/WithVideoForm"); // navega para o formulário com vídeo
     }
-  };
-
-  const handleBack = () => {
-    navigate(-1); // volta para a página anterior
   };
 
   return (
@@ -30,30 +26,14 @@ export default function YesorNoForm() {
         <div className="h-1 bg-gray-200">
           <div className="h-full bg-gradient-to-r from-green-400 to-green-600 transition-all duration-300 ease-out" />
         </div>
-        <div className="p-4">
-          <button onClick={handleBack} className="text-gray-700 hover:text-gray-900">
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-        </div>
       </header>
 
       <main className="flex-1 flex items-center justify-center p-6">
         <div className="w-full max-w-2xl">
           <div className="text-center mb-8">
             <h1 className="text-2xl font-semibold text-gray-900 mb-6 leading-tight">
-              Caso você seja aprovado(a), nossa equipe vai entrar em contato individual para falar com você no WhatsApp, aprova esse contato?
+              Caso você seja aprovado(a), nossa equipe vai entrar em contato
+              individual para falar com você no WhatsApp, aprova esse contato?
             </h1>
             <p className="text-gray-600 text-sm mb-8">
               Fica atento(a) no seu WhatsApp.

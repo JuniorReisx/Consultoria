@@ -32,19 +32,17 @@ export default function WithVideoForm() {
   const formatTime = (seconds: number) => {
     const minutes = Math.floor(seconds / 60);
     const secs = seconds % 60;
-    return `${minutes.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
+    return `${minutes.toString().padStart(2, "0")}:${secs
+      .toString()
+      .padStart(2, "0")}`;
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (whatsappContact.trim()) {
       console.log("WhatsApp Contact:", whatsappContact);
-      navigate('/ThankyouPage'); // Navegação com react-router
+      navigate("/ThankyouPage"); // Navegação com react-router
     }
-  };
-
-  const handleBack = () => {
-    navigate('/'); // Voltar para a rota principal
   };
 
   return (
@@ -64,45 +62,35 @@ export default function WithVideoForm() {
             {Math.round(scrollProgress)}% concluído
           </div>
         </div>
-        <div className="p-4">
-          <button onClick={handleBack} className="text-gray-700 hover:text-gray-900">
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-        </div>
       </header>
 
       <main className="flex-1 flex justify-center p-6 pt-32">
         <div className="w-full max-w-2xl">
           <div className="bg-green-100 text-green-800 text-center py-2 px-4 rounded-lg mb-6">
-            <span className="text-sm font-medium">Tempo limitado para preencher: {formatTime(countdown)}</span>
+            <span className="text-sm font-medium">
+              Tempo limitado para preencher: {formatTime(countdown)}
+            </span>
           </div>
 
           <div className="text-center mb-8">
             <h1 className="text-2xl font-semibold text-gray-900 mb-2 leading-tight">
-              Entenda em <span className="text-red-600">30 segundos</span> o porquê você deve participar da nossa consultoria.
+              Entenda em <span className="text-red-600">30 segundos</span> o
+              porquê você deve participar da nossa consultoria.
             </h1>
 
             <p className="text-gray-600 text-sm mb-6">
               Essa é uma reunião 100% personalizada e individual.
               <br />
-              Vamos estudar seu caso, te orientar e te entregar um plano direto e personalizado.
+              Vamos estudar seu caso, te orientar e te entregar um plano direto
+              e personalizado.
             </p>
           </div>
 
           <div className="mb-8">
-            <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+            <div
+              className="relative w-full"
+              style={{ paddingBottom: "56.25%" }}
+            >
               <iframe
                 className="absolute top-0 left-0 w-full h-full rounded-lg shadow-md"
                 src="https://www.youtube.com/embed/GN4Yn4wGqKY?si=62xyUP3_DIcDyMCY"
@@ -141,7 +129,9 @@ export default function WithVideoForm() {
 
       <footer className="bg-gray-50 py-4 flex-shrink-0">
         <div className="max-w-2xl mx-auto px-4 text-center">
-          <p className="text-gray-400 text-sm">© 2025 - Criado via inlead.digital | Central de anúncios</p>
+          <p className="text-gray-400 text-sm">
+            © 2025 - Criado via inlead.digital | Central de anúncios
+          </p>
         </div>
       </footer>
     </div>

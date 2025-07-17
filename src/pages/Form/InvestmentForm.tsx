@@ -9,7 +9,7 @@ export default function InvestmentForm() {
     e.preventDefault();
     if (resposta.trim()) {
       console.log("Investimento selecionado:", resposta);
-      navigate('/YesorNoForm');
+      navigate("/YesorNoForm");
     }
   };
 
@@ -17,29 +17,14 @@ export default function InvestmentForm() {
     <div className="h-screen flex flex-col overflow-hidden bg-gray-50">
       <header className="flex-shrink-0">
         <div className="px-4 py-2 flex items-center justify-between">
-          <div className="text-sm font-semibold text-gray-700">Victor Souza</div>
+          <div className="text-sm font-semibold text-gray-700">
+            Victor Souza
+          </div>
           <div className="text-xs text-gray-500">100% concluído</div>
         </div>
 
         <div className="h-1 bg-gray-200">
           <div className="h-full bg-gradient-to-r from-green-400 to-green-600 transition-all duration-300 ease-out" />
-        </div>
-        <div className="p-4">
-          <button className="text-gray-700 hover:text-gray-900">
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
         </div>
       </header>
 
@@ -47,7 +32,8 @@ export default function InvestmentForm() {
         <div className="w-full max-w-2xl">
           <div className="text-center mb-8">
             <h1 className="text-2xl font-semibold text-gray-900 mb-6 leading-tight">
-              Qual valor você tem disponível hoje e está disposto(a) a investir para fazer isso dar certo?
+              Qual valor você tem disponível hoje e está disposto(a) a investir
+              para fazer isso dar certo?
             </h1>
             <p className="text-gray-600 text-sm mb-8">
               desde começar no digital ou escalar seu negócio?

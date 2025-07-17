@@ -1,9 +1,7 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from "react";
 
 export default function VideoTrainingPage() {
   const [scrollProgress, setScrollProgress] = useState(0);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,13 +18,12 @@ export default function VideoTrainingPage() {
 
   const handleAccessPresente = () => {
     const phoneNumber = "5571987769040";
-    const message = "Olá! Acabei de assistir ao treinamento comercial e gostaria de saber mais informações.";
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappURL, '_blank');
-  };
-
-  const handleBack = () => {
-    navigate('/'); // Altere para a rota desejada
+    const message =
+      "Olá! Acabei de assistir ao treinamento comercial e gostaria de saber mais informações.";
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(whatsappURL, "_blank");
   };
 
   return (
@@ -45,23 +42,6 @@ export default function VideoTrainingPage() {
           <div className="text-xs text-gray-500">
             {Math.round(scrollProgress)}% concluído
           </div>
-        </div>
-        <div className="p-4">
-          <button onClick={handleBack} className="text-gray-700 hover:text-gray-900">
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
         </div>
       </header>
 

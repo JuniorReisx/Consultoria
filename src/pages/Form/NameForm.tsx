@@ -9,7 +9,7 @@ export default function NameForm() {
     e.preventDefault();
     if (nome.trim()) {
       console.log("Nome enviado:", nome);
-      navigate('/NumberForm');
+      navigate("/NumberForm");
     }
   };
 
@@ -25,23 +25,6 @@ export default function NameForm() {
 
         <div className="h-1 bg-gray-200">
           <div className="h-full bg-gradient-to-r from-green-400 to-green-600 transition-all duration-300 ease-out" />
-        </div>
-        <div className="p-4">
-          <button className="text-gray-700 hover:text-gray-900">
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
         </div>
       </header>
 
